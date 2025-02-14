@@ -21,20 +21,23 @@ public:
         // return false;
 
         // 方法2
-        int tmp = n;
-        if(tmp <=0 ){
-            return false;
-        }
-        
-        while(tmp%4 == 0){
-            tmp /= 4;
-        }
+        // int tmp = n;
+        // if(tmp <=0 ){
+        //     return false;
+        // }
 
-        if(tmp == 1){
-            return true;
-        }
+        // while(tmp%4 == 0){
+        //     tmp /= 4;
+        // }
 
-        return false;
+        // if(tmp == 1){
+        //     return true;
+        // }
+
+        // return false;
+
+        //方法3
+        return n > 0 && (n & (n - 1)) == 0 && (n & 0xaaaaaaaa) == 0;
     }
 };
 // @lc code=end
